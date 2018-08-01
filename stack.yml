@@ -1,0 +1,11 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+  network: func_functions
+
+functions:
+  access-control:
+    lang: node
+    handler: ./access-control
+    image: alexellis2/access-control:latest
+    readonly_root_filesystem: true
